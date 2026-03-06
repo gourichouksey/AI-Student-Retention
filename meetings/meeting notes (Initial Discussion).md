@@ -156,10 +156,10 @@ Build a working prototype with **prediction, explanation, recommendation, and mo
 
 ## Action Items
 
-| Done? | Item                                      |
-| ----- | ----------------------------------------- |
-| ⬜     | Define schema for student + prediction    |
-| ⬜     | Build ML pipeline (training + prediction) |
+| Done?  | Item                                      |
+| -------| ----------------------------------------- |
+| ☑      | Define schema for student + prediction    |
+| ☑      | Build ML pipeline (training + prediction) |
 | ⬜     | Implement SHAP explanations               |
 | ⬜     | Build React dashboard UI                  |
 | ⬜     | Integrate monitoring API into UI          |
