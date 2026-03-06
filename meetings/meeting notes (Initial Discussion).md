@@ -3,8 +3,11 @@
 ## Meeting Information
 
 **Meeting Date/Time:** March 3, 2026 | 4:00 PM – 5:00 PM IST 
+
 **Meeting Purpose:** Initial architecture discussion and planning for the Student Retention AI System
+
 **Meeting Location:** Google Meet
+
 **Note Takers:** Antra Gupta, Shourya Jain, Laxmi Sahu
 
 ---
