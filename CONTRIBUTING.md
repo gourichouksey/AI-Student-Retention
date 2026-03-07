@@ -1,4 +1,4 @@
-# Contributing to AI Student Retention System
+# Contributing to AI Student Retention 
 
 Thank you for your interest in contributing to the AI Student Retention! We welcome all contributions that help improve the project.
 
