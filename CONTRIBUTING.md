@@ -1,49 +1,37 @@
-# Contributing to AI-Student-Retention
+# Contributing to AI Student Retention 
 
-Thanks for your interest in contributing! We welcome improvements to the model, app, docs, and examples.
+Thank you for your interest in contributing to the AI Student Retention! We welcome all contributions that help improve the project.
 
 ## How to Contribute
-
-1. **Fork the repository** on GitHub.
-2. **Clone your fork**:
-
+1. **Fork the Repository**: Click the "Fork" button on GitHub and clone your fork.
+2. **Create a Branch**: 
    ```bash
-   git clone https://github.com/<your-username>/AI-Student-Retention.git
-   cd AI-Student-Retention
-   ```
-
-3. **Create a branch**:
-
+   git checkout -b feature-name
+   
+3. **Make Your Changes**: Add features, improve the ML model, fix bugs, or enhance documentation.
+4. **Commit Your Changes**:
    ```bash
-   git checkout -b feature/my-change
-   ```
-
-4. **Make your changes** (features, bug fixes, docs).
-5. **Commit your changes**:
-
-   ```bash
-   git add -A
    git commit -m "Describe your changes"
-   ```
+   
+5. **Push Your Changes**:
+    ```bash
+    git push origin feature-name
 
-6. **Push your branch**:
+6. **Submit a Pull Request**: Open a pull request on GitHub and describe your changes.
 
-   ```bash
-   git push -u origin feature/my-change
-   ```
+# Guidelines
 
-7. **Open a Pull Request** and describe:
-   - What you changed
-   - Why you changed it
-   - How to test it (if applicable)
+Follow clean coding practices and keep the code readable.
 
-## Guidelines
+Ensure your changes do not break existing functionality.
 
-- Keep changes focused and readable.
-- Avoid committing secrets (API keys, tokens, passwords).
-- Update documentation when behavior changes.
-- Test your changes before opening a PR.
+Add comments or documentation where necessary.
 
-## Need Help?
+Test your changes before submitting a pull request.
 
-Open a GitHub issue with your question or suggestion.
+# Need Help?
+
+If you have questions or suggestions, open an issue in the repository.
+
+Happy coding! 🚀
+
