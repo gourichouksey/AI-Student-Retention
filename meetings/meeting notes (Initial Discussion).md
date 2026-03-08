@@ -160,10 +160,10 @@ Build a working prototype with **prediction, explanation, recommendation, and mo
 | -------| ----------------------------------------- |
 | ☑      | Define schema for student + prediction    |
 | ☑      | Build ML pipeline (training + prediction) |
-| ⬜     | Implement SHAP explanations               |
-| ⬜     | Build React dashboard UI                  |
-| ⬜     | Integrate monitoring API into UI          |
-| ⬜     | End-to-end demo                           |
+| ☑      | Implement SHAP explanations               |
+| ☑      | Build React dashboard UI                  |
+| ☑      | Integrate monitoring API into UI          |
+| ☑      | End-to-end demo                           |
 
 ---
 
