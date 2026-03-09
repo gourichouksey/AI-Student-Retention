@@ -82,14 +82,16 @@ Focus Areas
 - Database schema reviewed before changes  
 - Weekly demo of end-to-end flow  
 ---
-Action Items
-Done?	Item
- ☑	Define schema for student + prediction
-[ ]	Build ML pipeline (training + predict)
-[ ]	Implement SHAP explanations
-[ ]	Build React dashboard UI
-[ ]	Integrate monitoring API in UI
-[ ]	End-to-end demo
+# Action Items
+| Done? |   	Item                                        |
+---------------------------------------------------------
+|  ☑   | 	Define schema for student + prediction        |
+| [ ]	 |  Build ML pipeline (training + predict)         |
+| [ ]	 |   Implement SHAP explanations                   |
+| [ ]  |  	Build React dashboard UI                      |
+| [ ]	 |   Integrate monitoring API in UI                |
+| [ ]	 |   End-to-end demo                               |
+---------------------------------------------------------
 ---
 ## Other Notes
 - The system must always return **Prediction + Explanation + Recommendation** together.  
