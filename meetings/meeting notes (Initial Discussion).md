@@ -36,14 +36,14 @@ The architecture must also support:
 - Easy integration with school systems  
 ---
 # Core Components (Proposed)
-Component
-Data Ingestion
-ML Model
-SHAP Explanation
-Recommendation Engine
-Backend API (Flask)
-Database (SQLite)
-Frontend Dashboard (React)
+## Component
+- Data Ingestion
+- ML Model
+- SHAP Explanation
+- Recommendation Engine
+- Backend API (Flask)
+- Database (SQLite)
+- Frontend Dashboard (React)
 ---
 ## Technology Choices (Initial)
 ### Machine Learning
