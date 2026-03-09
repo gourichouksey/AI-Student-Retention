@@ -66,9 +66,9 @@ The architecture must also support:
 - Monitoring is mandatory (not optional)  
 ---
 # Weekly Plan (March 1 - March 7)
-Primary Goal:  
+## Primary Goal:  
 Build a working prototype with prediction + explanation + recommendation + monitoring.
-Focus Areas
+### Focus Areas
 - Generate synthetic dataset  
 - Train baseline ML model  
 - Integrate SHAP explanations  
@@ -81,17 +81,6 @@ Focus Areas
 - UI/UX iterations based on feedback  
 - Database schema reviewed before changes  
 - Weekly demo of end-to-end flow  
----
-# Action Items
-| Done? |   	Item                                        |
----------------------------------------------------------
-|  ☑   | 	Define schema for student + prediction        |
-| [ ]	 |  Build ML pipeline (training + predict)         |
-| [ ]	 |   Implement SHAP explanations                   |
-| [ ]  |  	Build React dashboard UI                      |
-| [ ]	 |   Integrate monitoring API in UI                |
-| [ ]	 |   End-to-end demo                               |
----------------------------------------------------------
 ---
 ## Other Notes
 - The system must always return **Prediction + Explanation + Recommendation** together.  
