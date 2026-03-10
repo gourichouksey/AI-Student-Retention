@@ -1,0 +1,12 @@
+{
+  "name": "student-retention-ai",
+  "version": "1.0.0",
+  "description": "Full-stack demo for dropout risk prediction, SHAP explanation, recommendations, and monitoring.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
