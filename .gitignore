@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.Python
+venv/
+.venv/
+env/
+.env
+
+# Node / Vite
+node_modules/
+dist/
+.vite/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# Local databases / artifacts
+*.sqlite3
+backend/instance/
+backend/training/artifacts/
+
+# Optional training label files (Access-based mode)
+backend/training/dataset2.csv
+backend/training/dataset3.csv
+backend/training/dataset4.csv
+backend/training/dataset5.csv
