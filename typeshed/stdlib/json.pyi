@@ -1,6 +1,0 @@
-# Minimal json stubs
-
-from builtins import str, object
-
-def dumps(obj: object, *args: object, **kwargs: object) -> str: ...
-def loads(s: str, *args: object, **kwargs: object) -> object: ...
