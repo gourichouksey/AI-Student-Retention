@@ -40,8 +40,3 @@ npm run dev
 
 - Update `backend/services/predictor.py` to point at your trained model.
 - The frontend calls the backend API via `src/api.js`.
-## Contributors
-
-| Name | Role | Contribution |
-|------|------|-------------|
-| Antra Gupta | DS/ML + Backend | Upgraded ML model from Random Forest to XGBoost, built feature engineering module (9→25 features), fixed SHAP explainer, improved recall to 89.4% |
