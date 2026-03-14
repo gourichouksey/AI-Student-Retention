@@ -66,3 +66,4 @@ export default function ShapPlot({ data }) {
     </div>
   );
 }
+
