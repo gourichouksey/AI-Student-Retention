@@ -2,7 +2,7 @@ def generate_recommendations(data, risk_score):
     recs = []
 
     if data["family_income"] < 200000 and data["scholarship_status"].lower() == "no":
-        recs.append("Scholarship recommendation (financial support).")
+        recs.append("Scholarship recommendation (check eligibility + apply).")
 
     if data["attendance_pct"] < 70:
         recs.append("Parent meeting due to attendance issues.")

@@ -4,6 +4,12 @@
   "description": "Full-stack demo for dropout risk prediction, SHAP explanation, recommendations, and monitoring.",
   "main": "index.js",
   "scripts": {
+    "postinstall": "npm --prefix frontend install",
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "preview": "npm --prefix frontend run preview",
+    "install:frontend": "npm --prefix frontend install",
+    "dev:backend": "python backend/app.py",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

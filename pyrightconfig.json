@@ -1,0 +1,26 @@
+{
+  "include": [
+    "backend"
+  ],
+  "typeshedPath": "./typeshed",
+  "venvPath": ".",
+  "venv": ".venv",
+  "extraPaths": [
+    "backend"
+  ],
+  "exclude": [
+    "backend/.venv_unused",
+    "**/__pycache__"
+  ],
+  "executionEnvironments": [
+    {
+      "root": "backend",
+      "extraPaths": [
+        "backend"
+      ]
+    }
+  ],
+  "reportMissingImports": "none",
+  "reportUndefinedVariable": "none",
+  "reportMissingTypeStubs": false
+}

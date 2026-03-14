@@ -1,7 +1,7 @@
-﻿# Initial Discussion: Architecture and Services ΓÇô 2026-03-03
+﻿# Initial Discussion: Architecture and Services - 2026-03-03
 
 # Meeting Information
-Meeting Date/Time: March 3, 2026 | 4:00 PM ΓÇô 5:00 PM IST  
+Meeting Date/Time: March 3, 2026 | 4:00 PM - 5:00 PM IST  
 Meeting Purpose: Initial architecture discussion and planning for Student Retention AI system  
 Meeting Location: Google Meet  
 Note Taker: Antra Gupta, Shourya Jain, Laxmi Sahu
@@ -16,21 +16,21 @@ Project Repository: https://github.com/gourichouksey/AI-Student-Retention
 - Laxmi Sahu (Contributor)
 ---
 # Meeting Context
-This was the first architecture meeting for the AIΓÇæDriven Student Retention & Adaptive Counseling System.  
-The team is in the design and implementation phase, aiming to build a fullΓÇæstack prototype.
+This was the first architecture meeting for the AI-Driven Student Retention & Adaptive Counseling System.  
+The team is in the design and implementation phase, aiming to build a full-stack prototype.
 The primary goal is to design a clean, scalable, and readable architecture that:
 - Follows strong coding and folder structure practices  
 - Is easy for contributors to understand  
 - Keeps ML, backend, and frontend decoupled  
 - Supports explainability and actionable recommendations  
-- Enables longΓÇæterm monitoring of outcomes  
-The longΓÇæterm objective is to build a schoolΓÇæready system that predicts dropout risk, explains the reasons, recommends interventions, and tracks impact.
+- Enables long-term monitoring of outcomes  
+The long-term objective is to build a school-ready system that predicts dropout risk, explains the reasons, recommends interventions, and tracks impact.
 ---
 # High-Level System Overview
 The system will implement a full predictive + explainable + actionable pipeline:
-Student Data ΓåÆ ML Model ΓåÆ SHAP Explanation ΓåÆ Recommendation Engine ΓåÆ Dashboard ΓåÆ Monitoring
+Student Data -> ML Model -> SHAP Explanation -> Recommendation Engine -> Dashboard -> Monitoring
 The architecture must also support:
-- Batch and singleΓÇæstudent predictions  
+- Batch and single-student predictions  
 - Persistent storage for interventions and outcomes  
 - Scalable model updates  
 - Easy integration with school systems  
@@ -65,7 +65,7 @@ Frontend Dashboard (React)
 - All predictions must include explanation + action  
 - Monitoring is mandatory (not optional)  
 ---
-# Weekly Plan (March 1 ΓÇô March 7)
+# Weekly Plan (March 1 - March 7)
 Primary Goal:  
 Build a working prototype with prediction + explanation + recommendation + monitoring.
 Focus Areas
@@ -74,28 +74,22 @@ Focus Areas
 - Integrate SHAP explanations  
 - Build Flask APIs for predict + monitor  
 - Build React dashboard (input + risk + actions)  
-Responsibilities
-Member
-Gouri Chouksey
-Shourya Jain
-Laxmi Sahu
-Antra Gupta
 ---
 ## Workflow & Contribution Plan
-- Daily updates and checkΓÇæins  
+- Daily updates and check-ins  
 - API contracts documented in `/docs`  
 - UI/UX iterations based on feedback  
 - Database schema reviewed before changes  
-- Weekly demo of endΓÇætoΓÇæend flow  
+- Weekly demo of end-to-end flow  
 ---
 Action Items
 Done?	Item
-Γÿæ	Define schema for student + prediction
-ΓÿÉ	Build ML pipeline (training + predict)
-ΓÿÉ	Implement SHAP explanations
-ΓÿÉ	Build React dashboard UI
-ΓÿÉ	Integrate monitoring API in UI
-ΓÿÉ	EndΓÇætoΓÇæend demo
+ ☑	Define schema for student + prediction
+[ ]	Build ML pipeline (training + predict)
+[ ]	Implement SHAP explanations
+[ ]	Build React dashboard UI
+[ ]	Integrate monitoring API in UI
+[ ]	End-to-end demo
 ---
 ## Other Notes
 - The system must always return **Prediction + Explanation + Recommendation** together.  
