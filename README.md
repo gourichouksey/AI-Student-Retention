@@ -28,6 +28,26 @@ Schools often recognize risk only after a student has already disengaged. This s
 - Intervention monitoring and outcomes  
 - Login/Sign‑up (demo mode)
 
+# Run locally
+
+## Backend (API)
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r backend/requirements.txt
+python backend/services/api_server.py
+```
+
+## Frontend
+Open a new terminal:
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Frontend runs on port 5173 and calls backend on port 5000.
+
 # Use cases  
 - Academic advisors prioritizing at‑risk students  
 - Teachers identifying class‑level risk drivers  
