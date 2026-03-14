@@ -1,42 +1,48 @@
-# Fresh Contribution
+# AI-Student-Retention
 
-A full-stack proof-of-concept for risk prediction and monitoring.
+# What is it  
+An AI‑Driven Student Retention & Adaptive Counseling System that predicts dropout risk, explains the reasons, recommends actions, and tracks interventions over time.
 
-## Project Structure
+# Why it exists  
+Schools often recognize risk only after a student has already disengaged. This system helps detect early warning signs, explain the root causes, and enable timely support.
 
-- `backend/` – Python services (model training, prediction, explainability)
-  - `training/` – data processing + model training scripts
-  - `services/` – prediction and SHAP explain endpoints
-- `demo/` – sample data and other demo assets
-- `frontend/` – web UI built with Vite + React
+# Core principles  
+- Early detection over late reaction  
+- Transparent, explainable AI  
+- Actionable insights, not just scores  
+- Human‑centered interventions  
+- Continuous monitoring and improvement
 
-## Getting Started
+# How it works  
+1) Student data is collected (attendance, grades, backlogs, income, parents’ education, scholarship status).  
+2) A ML model predicts dropout probability.  
+3) SHAP explains key contributors for each student.  
+4) Rules generate counseling recommendations.  
+5) The dashboard shows risk, reasons, actions, and intervention status.
 
-### Backend (Python)
+# Features  
+- Dropout risk prediction (probability score)  
+- SHAP explanations (top contributing factors)  
+- Automatic counseling suggestions  
+- High‑risk student list  
+- Intervention monitoring and outcomes  
+- Login/Sign‑up (demo mode)
 
-1. Create a virtual environment and install requirements:
+# Use cases  
+- Academic advisors prioritizing at‑risk students  
+- Teachers identifying class‑level risk drivers  
+- Counselors tracking intervention impact  
+- Administrators monitoring retention programs
 
-```bash
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r backend/requirements.txt
-```
+# Vision  
+To give educators a reliable, explainable, and actionable system that improves student retention through early support and measurable interventions.
+Contributing  
+- Fork the repo  
+- Create a feature branch  
+- Commit your changes  
+- Open a pull request with a clear description
 
-2. Run the predictor service (adjust as needed):
+## License
 
-```bash
-python backend/services/predictor.py
-```
+This project is licensed under the [MIT License](LICENSE).
 
-### Frontend (React)
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-## Notes
-
-- Update `backend/services/predictor.py` to point at your trained model.
-- The frontend calls the backend API via `src/api.js`.
