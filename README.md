@@ -28,25 +28,71 @@ Schools often recognize risk only after a student has already disengaged. This s
 - Intervention monitoring and outcomes  
 - Login/Sign‑up (demo mode)
 
+# Setup  (Easy Local Setup)
+
+## Prerequisites
+- Python 3.11+
+- Node.js 18+
+- npm
+
+## 1) Clone and open project
+
+```bash
+git clone <your-repo-url>
+cd AI-Student-Retention
+```
+
+## 2) Install backend dependencies
+
+```powershell
+py -3 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install --upgrade pip
+.\.venv\Scripts\python.exe -m pip install -r backend\requirements.txt
+```
+
+## 3) Install frontend dependencies
+
+```powershell
+cd frontend
+npm install
+cd ..
+```
+
+## 4) Add environment file
+
+Create `frontend/.env.local`:
+
+```env
+VITE_API_BASE_URL=http://127.0.0.1:5000
+VITE_GOOGLE_CLIENT_ID=YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com
+```
+
+For Google OAuth local use, add this in Google Cloud Console (Authorized JavaScript origins):
+- `http://localhost:5300`
+
 # Run locally
 
 ## Backend (API)
-```bash
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r backend/requirements.txt
-python backend/services/api_server.py
+```powershell
+npm run backend
 ```
+
+Health check:
+- `http://127.0.0.1:5000/health`
 
 ## Frontend
 Open a new terminal:
-```bash
-cd frontend
-npm install
-npm run dev
+```powershell
+npm run frontend:oauth
 ```
 
-Frontend runs on port 5173 and calls backend on port 5000.
+Frontend runs at:
+- `http://localhost:5300/`
+
+## Quick Troubleshooting
+- If `.venv\Scripts\activate` fails, use direct Python path commands shown above.
+- If OAuth shows `origin_mismatch`, ensure the origin is exactly `http://localhost:5300`.
+- If frontend cannot reach backend, start backend first and verify `/health`.
 
 # Use cases  
 - Academic advisors prioritizing at‑risk students  
@@ -56,7 +102,8 @@ Frontend runs on port 5173 and calls backend on port 5000.
 
 # Vision  
 To give educators a reliable, explainable, and actionable system that improves student retention through early support and measurable interventions.
-Contributing  
+
+# Contributing
 - Fork the repo  
 - Create a feature branch  
 - Commit your changes  
