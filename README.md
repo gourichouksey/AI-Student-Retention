@@ -32,35 +32,35 @@ How It Works
    ┌──────────────┐                                             │
    │   Frontend   │ ─── React form + dashboard input            │
    │ (React/Vite) │                                             │
-   └──────┬───────┘                                             │
+   └───┬──────────┘                                             │
 	   │                                                        │
 	   ▼                                                        │
    ┌──────────────┐                                             │
    │   Backend    │ ─── Flask API receives student data         │
    │   /predict   │                                             │
-   └──────┬───────┘                                             │
+   └───┬──────────┘                                             │
 	   │                                                        │
 	   ▼                                                        │
    ┌──────────────┐                                             │
    │  ML Model    │ ─── Predicts dropout risk score             │
-   └──────┬───────┘                                             │
+   └───┬──────────┘                                             │
 	   │                                                        │
 	   ▼                                                        │
    ┌──────────────┐                                             │
    │    SHAP      │ ─── Explains top risk factors               │
-   └──────┬───────┘                                             │
+   └───┬──────────┘                                             │
 	   │                                                        │
 	   ▼                                                        │
-   ┌──────────────┐                                             │
+   ┌───────────────┐                                            │
    │ Recommendation│ ─── Suggests intervention actions          │
    │   Engine      │                                            │
-   └──────┬───────┘                                             │
+   └───┬───────────┘                                            │
 	   │                                                        │
 	   ▼                                                        │
    ┌──────────────┐                                             │
    │  Dashboard   │ ─── Shows risk + reasons + next actions     │
    │   Output     │                                             │
-   └──────┬───────┘                                             │
+   └───┬──────────┘                                             │
 	   │                                                        │
 	   ▼                                                        │
    Counselor acts ───► Follow-up result? ───────────────────────┘
