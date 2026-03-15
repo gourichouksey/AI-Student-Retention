@@ -20,6 +20,57 @@ Schools often recognize risk only after a student has already disengaged. This s
 4) Rules generate counseling recommendations.  
 5) The dashboard shows risk, reasons, actions, and intervention status.
 
+```text
+How It Works
+
+	 ┌───────────────────────────────────────────────────────┐
+	 │                                                       │
+	 ▼                                                       │
+   Student data entered                                         │
+	 │                                                       │
+	 ▼                                                       │
+   ┌──────────────┐                                             │
+   │   Frontend   │ ─── React form + dashboard input           │
+   │ (React/Vite) │                                             │
+   └──────┬───────┘                                             │
+	   │                                                     │
+	   ▼                                                     │
+   ┌──────────────┐                                             │
+   │   Backend    │ ─── Flask API receives student data         │
+   │   /predict   │                                             │
+   └──────┬───────┘                                             │
+	   │                                                     │
+	   ▼                                                     │
+   ┌──────────────┐                                             │
+   │  ML Model    │ ─── Predicts dropout risk score             │
+   └──────┬───────┘                                             │
+	   │                                                     │
+	   ▼                                                     │
+   ┌──────────────┐                                             │
+   │    SHAP      │ ─── Explains top risk factors               │
+   └──────┬───────┘                                             │
+	   │                                                     │
+	   ▼                                                     │
+   ┌──────────────┐                                             │
+   │ Recommendation│ ─── Suggests intervention actions          │
+   │   Engine      │                                             │
+   └──────┬───────┘                                             │
+	   │                                                     │
+	   ▼                                                     │
+   ┌──────────────┐                                             │
+   │  Dashboard   │ ─── Shows risk + reasons + next actions    │
+   │   Output     │                                             │
+   └──────┬───────┘                                             │
+	   │                                                     │
+	   ▼                                                     │
+   Counselor acts ───► Follow-up result? ───────────────────────┘
+	   │
+	   ▼
+   Continue support,
+   monitor progress,
+   update decisions
+```
+
 # Features  
 - Dropout risk prediction (probability score)  
 - SHAP explanations (top contributing factors)  
