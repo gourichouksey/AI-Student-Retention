@@ -73,3 +73,4 @@ export async function chatWithAi(messages) {
   });
   return res.json();
 }
+

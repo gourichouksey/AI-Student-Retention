@@ -34,3 +34,4 @@ export default function Recommendations({ items }) {
     </div>
   );
 }
+
