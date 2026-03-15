@@ -6,20 +6,45 @@ from typing import Any
 
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+from dotenv import load_dotenv
+
+load_dotenv()
 
 try:
-    from predictor import predict_risk
+    from .predictor import predict_risk
 except Exception:
-    predict_risk = None
+    try:
+        from predictor import predict_risk
+    except Exception:
+        predict_risk = None
 
 try:
-    from shap_explain import explain_student
+    from .shap_explain import explain_student
 except Exception:
-    explain_student = None
+    try:
+        from shap_explain import explain_student
+    except Exception:
+        explain_student = None
+
+
+def _parse_bool(value: str | None, default: bool = False) -> bool:
+    if value is None:
+        return default
+    return value.strip().lower() in {"1", "true", "yes", "on"}
+
+
+def _parse_cors_origins(value: str | None) -> list[str] | None:
+    if value is None or not value.strip() or value.strip() == "*":
+        return None
+    return [origin.strip() for origin in value.split(",") if origin.strip()]
 
 
 app = Flask(__name__)
-CORS(app)
+cors_origins = _parse_cors_origins(os.getenv("CORS_ORIGINS"))
+if cors_origins:
+    CORS(app, resources={r"/*": {"origins": cors_origins}})
+else:
+    CORS(app)
 
 
 USERS: list[dict[str, Any]] = []
@@ -287,4 +312,5 @@ def chat() -> Any:
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", "5000"))
-    app.run(host="0.0.0.0", port=port, debug=True)
+    debug = _parse_bool(os.getenv("FLASK_DEBUG"), default=False)
+    app.run(host="0.0.0.0", port=port, debug=debug, use_reloader=debug)

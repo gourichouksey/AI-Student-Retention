@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "frontend": "vite",
+    "frontend:oauth": "powershell -ExecutionPolicy Bypass -File start-frontend-oauth.ps1",
     "build": "vite build",
     "preview": "vite preview"
   },

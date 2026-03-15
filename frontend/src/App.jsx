@@ -101,7 +101,7 @@ const scholarshipLinks = [
   },
 ];
 
-export default function App() {
+export default function App({ googleOauthEnabled = false }) {
   const [slide, setSlide] = useState(1);
   const [menuOpen, setMenuOpen] = useState(false);
   const [chatOpen, setChatOpen] = useState(false);
@@ -336,10 +336,23 @@ export default function App() {
                 {authMode === "login" ? "Login" : "Create Account"}
               </button>
               <div className="google-wrap">
-                <GoogleLogin
-                  onSuccess={(credentialResponse) => handleGoogleAuth(credentialResponse.credential)}
-                  onError={() => setError("Google login failed")}
-                />
+                {googleOauthEnabled ? (
+                  <GoogleLogin
+                    onSuccess={(credentialResponse) => handleGoogleAuth(credentialResponse.credential)}
+                    onError={() =>
+                      setError(
+                        "Google login failed. In Google Cloud Console add this origin: " +
+                          window.location.origin
+                      )
+                    }
+                  />
+                ) : (
+                  <div className="hint">
+                    Google login disabled. Set VITE_GOOGLE_CLIENT_ID in frontend/.env.local and authorize origin:
+                    {" "}
+                    {window.location.origin}
+                  </div>
+                )}
               </div>
             </div>
             {error && <div className="error">{error}</div>}

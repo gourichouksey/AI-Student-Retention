@@ -11,3 +11,4 @@ google-auth==2.30.0
 requests==2.32.3
 google-generativeai==0.8.5
 python-dotenv==1.0.1
+gunicorn==22.0.0
