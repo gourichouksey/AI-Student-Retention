@@ -23,46 +23,46 @@ Schools often recognize risk only after a student has already disengaged. This s
 ```text
 How It Works
 
-	 ┌──────────────────────────────────────────────────────────┐
-	 │                                                          │
-	 ▼                                                          │
+	 ┌───────────────────────────────────────────────────────────┐
+	 │                                                           │
+	 ▼                                                           │
    Student data entered                                         │
-	 │                                                          │
-	 ▼                                                          │
+	 │                                                           │
+	 ▼                                                           │
    ┌──────────────┐                                             │
    │   Frontend   │ ─── React form + dashboard input            │
    │ (React/Vite) │                                             │
-   └───┬──────────┘                                             │
-	   │                                                        │
-	   ▼                                                        │
+   └──┬───────────┘                                             │
+	   │                                                         │
+	   ▼                                                         │
    ┌──────────────┐                                             │
    │   Backend    │ ─── Flask API receives student data         │
    │   /predict   │                                             │
-   └───┬──────────┘                                             │
-	   │                                                        │
-	   ▼                                                        │
+   └──┬───────────┘                                             │
+	   │                                                         │
+	   ▼                                                         │
    ┌──────────────┐                                             │
    │  ML Model    │ ─── Predicts dropout risk score             │
-   └───┬──────────┘                                             │
-	   │                                                        │
-	   ▼                                                        │
+   └──┬───────────┘                                             │
+	   │                                                         │
+	   ▼                                                         │
    ┌──────────────┐                                             │
    │    SHAP      │ ─── Explains top risk factors               │
-   └───┬──────────┘                                             │
-	   │                                                        │
-	   ▼                                                        │
+   └──┬───────────┘                                             │
+	   │                                                         │
+	   ▼                                                         │
    ┌───────────────┐                                            │
    │ Recommendation│ ─── Suggests intervention actions          │
    │   Engine      │                                            │
-   └───┬───────────┘                                            │
-	   │                                                        │
-	   ▼                                                        │
+   └──┬────────────┘                                            │
+	   │                                                         │
+	   ▼                                                         │
    ┌──────────────┐                                             │
    │  Dashboard   │ ─── Shows risk + reasons + next actions     │
    │   Output     │                                             │
-   └───┬──────────┘                                             │
-	   │                                                        │
-	   ▼                                                        │
+   └──┬───────────┘                                             │
+	   │                                                         │
+	   ▼                                                         │
    Counselor acts ───► Follow-up result? ───────────────────────┘
 	   │
 	   ▼
@@ -153,12 +153,6 @@ Frontend runs at:
 
 # Vision  
 To give educators a reliable, explainable, and actionable system that improves student retention through early support and measurable interventions.
-
-# Contributing
-- Fork the repo  
-- Create a feature branch  
-- Commit your changes  
-- Open a pull request with a clear description
 
 ## License
 
