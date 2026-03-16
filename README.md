@@ -26,44 +26,44 @@ How It Works
 	 ┌───────────────────────────────────────────────────────────┐
 	 │                                                           │
 	 ▼                                                           │
-   Student data entered                                         │
+   Student data entered                                          │
 	 │                                                           │
 	 ▼                                                           │
-   ┌──────────────┐                                             │
-   │   Frontend   │ ─── React form + dashboard input            │
-   │ (React/Vite) │                                             │
-   └──┬───────────┘                                             │
+   ┌──────────────┐                                              │
+   │   Frontend   │ ─── React form + dashboard input             │
+   │ (React/Vite) │                                              │
+   └───┬──────────┘                                              │
 	   │                                                         │
 	   ▼                                                         │
-   ┌──────────────┐                                             │
-   │   Backend    │ ─── Flask API receives student data         │
-   │   /predict   │                                             │
-   └──┬───────────┘                                             │
+   ┌──────────────┐                                              │
+   │   Backend    │ ─── Flask API receives student data          │
+   │   /predict   │                                              │
+   └───┬──────────┘                                              │
 	   │                                                         │
 	   ▼                                                         │
-   ┌──────────────┐                                             │
-   │  ML Model    │ ─── Predicts dropout risk score             │
-   └──┬───────────┘                                             │
+   ┌──────────────┐                                              │
+   │  ML Model    │ ─── Predicts dropout risk score              │
+   └───┬──────────┘                                              │
 	   │                                                         │
 	   ▼                                                         │
-   ┌──────────────┐                                             │
-   │    SHAP      │ ─── Explains top risk factors               │
-   └──┬───────────┘                                             │
+   ┌──────────────┐                                              │
+   │    SHAP      │ ─── Explains top risk factors                │
+   └───┬──────────┘                                              │
 	   │                                                         │
 	   ▼                                                         │
-   ┌───────────────┐                                            │
-   │ Recommendation│ ─── Suggests intervention actions          │
-   │   Engine      │                                            │
-   └──┬────────────┘                                            │
+   ┌───────────────┐                                             │
+   │ Recommendation│ ─── Suggests intervention actions           │
+   │   Engine      │                                             │
+   └───┬───────────┘                                             │
 	   │                                                         │
 	   ▼                                                         │
-   ┌──────────────┐                                             │
-   │  Dashboard   │ ─── Shows risk + reasons + next actions     │
-   │   Output     │                                             │
-   └──┬───────────┘                                             │
+   ┌──────────────┐                                              │
+   │  Dashboard   │ ─── Shows risk + reasons + next actions      │
+   │   Output     │                                              │
+   └───┬──────────┘                                              │
 	   │                                                         │
 	   ▼                                                         │
-   Counselor acts ───► Follow-up result? ───────────────────────┘
+   Counselor acts ───► Follow-up result? ────────────────────────┘
 	   │
 	   ▼
    Continue support,
