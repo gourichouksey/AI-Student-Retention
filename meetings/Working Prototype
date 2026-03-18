@@ -71,7 +71,7 @@ Update (2026-03-09)
 ### API Integration
 - Frontend uses fetch calls to backend endpoints (/predict, /students/high-risk, /monitoring, /actions, /auth/*).
 
-Update (2026-03-09)
+## Update (2026-03-09)
 - Frontend backend URL is configurable via `VITE_API_BASE_URL` and defaults to `http://<current-hostname>:5000` for LAN-friendly usage.
 - Backend binds are configurable via `HOST`, `PORT`, and `FLASK_DEBUG` so the API can be shared over LAN.
 - SQLite path is now stable: default DB is stored in `backend/instance/db.sqlite3` (or overridden with `DATABASE_URL`).
