@@ -8,12 +8,14 @@ Note Taker: Antra Gupta, Shourya Jain, Laxmi Sahu
 
 # Repository
 Project Repository: https://github.com/gourichouksey/AI-Student-Retention
+
 ---
 # Attendees
 - Gouri Chouksey (Team Leader)
 - Antra Gupta (Contributor)
 - Shourya Jain (Contributor)
 - Laxmi Sahu (Contributor)
+
 ---
 # Meeting Context
 This was the first architecture meeting for the AI-Driven Student Retention & Adaptive Counseling System.  
@@ -25,6 +27,7 @@ The primary goal is to design a clean, scalable, and readable architecture that:
 - Supports explainability and actionable recommendations  
 - Enables long-term monitoring of outcomes  
 The long-term objective is to build a school-ready system that predicts dropout risk, explains the reasons, recommends interventions, and tracks impact.
+
 ---
 # High-Level System Overview
 The system will implement a full predictive + explainable + actionable pipeline:
@@ -34,6 +37,7 @@ The architecture must also support:
 - Persistent storage for interventions and outcomes  
 - Scalable model updates  
 - Easy integration with school systems  
+
 ---
 # Core Components (Proposed)
 ## Component
@@ -44,6 +48,7 @@ The architecture must also support:
 - Backend API (Flask)
 - Database (SQLite)
 - Frontend Dashboard (React)
+
 ---
 ## Technology Choices (Initial)
 ### Machine Learning
@@ -57,6 +62,7 @@ The architecture must also support:
 - React (Vite)
 ### Database
 - SQLite (prototype; Postgres planned for production)
+
 ---
 # Architecture Principles (Under Discussion)
 - Modular design with clear service boundaries  
@@ -64,6 +70,7 @@ The architecture must also support:
 - Consistent data schema and validation  
 - All predictions must include explanation + action  
 - Monitoring is mandatory (not optional)  
+
 ---
 # Weekly Plan (March 1 - March 7)
 ## Primary Goal:  
@@ -74,6 +81,7 @@ Build a working prototype with prediction + explanation + recommendation + monit
 - Integrate SHAP explanations  
 - Build Flask APIs for predict + monitor  
 - Build React dashboard (input + risk + actions)  
+
 ---
 ## Workflow & Contribution Plan
 - Daily updates and check-ins  
