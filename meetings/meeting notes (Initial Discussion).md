@@ -88,11 +88,13 @@ Build a working prototype with prediction + explanation + recommendation + monit
 - API contracts documented in `/docs`  
 - UI/UX iterations based on feedback  
 - Database schema reviewed before changes  
-- Weekly demo of end-to-end flow  
+- Weekly demo of end-to-end flow
+
 ---
 ## Other Notes
 - The system must always return **Prediction + Explanation + Recommendation** together.  
 - Monitoring outcomes is required for evaluation and improvement.  
-- Later versions should include model retraining and bias audits.  
+- Later versions should include model retraining and bias audits.
+
 ---
 
