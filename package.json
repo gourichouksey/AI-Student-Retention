@@ -10,6 +10,8 @@
     "preview": "npm --prefix frontend run preview",
     "install:frontend": "npm --prefix frontend install",
     "dev:backend": "python backend/app.py",
+    "backend": "python backend/app.py",
+    "frontend:oauth": "npm --prefix frontend run dev -- --port 5300",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
