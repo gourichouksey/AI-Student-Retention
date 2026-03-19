@@ -8,6 +8,7 @@ venv/
 env/
 .env
 
+<<<<<<< HEAD
 # VS Code workspace settings (often contain machine-specific paths)
 .vscode/
 
@@ -19,6 +20,8 @@ frontend/.env
 # Local-only scratch env/venv folders
 backend/.venv_unused/
 
+=======
+>>>>>>> upstream/main
 # Node / Vite
 node_modules/
 dist/
@@ -33,11 +36,18 @@ Thumbs.db
 backend/instance/
 backend/training/artifacts/
 
+<<<<<<< HEAD
 # Root-level runtime data (if created)
 instance/
 
+=======
+>>>>>>> upstream/main
 # Optional training label files (Access-based mode)
 backend/training/dataset2.csv
 backend/training/dataset3.csv
 backend/training/dataset4.csv
+<<<<<<< HEAD
 backend/training/dataset5.csv
+=======
+backend/training/dataset5.csv
+>>>>>>> upstream/main

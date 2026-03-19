@@ -15,3 +15,7 @@ export default function HighRiskList({ students }) {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/main

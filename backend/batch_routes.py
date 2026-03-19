@@ -8,7 +8,10 @@ Teacher uploads Excel or CSV file with student records.
 System predicts dropout risk for every student.
 Returns ranked results + downloadable Excel with risk scores.
 """
+import sys
+from pathlib import Path
 
+sys.path.append(str(Path(__file__).resolve().parents[1]))
 import io
 import os
 import sys
@@ -19,7 +22,7 @@ from flask import Blueprint, request, jsonify, send_file
 
 # Import predictor
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from services.predictor import predict_risk
+from backend.services.predictor import predict_risk
 
 batch_bp = Blueprint("batch", __name__)
 

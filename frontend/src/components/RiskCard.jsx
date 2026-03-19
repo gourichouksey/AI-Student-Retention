@@ -21,3 +21,7 @@ export default function RiskCard({ score }) {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/main

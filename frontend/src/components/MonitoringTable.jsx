@@ -34,3 +34,7 @@ export default function MonitoringTable({ actions }) {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/main

@@ -73,3 +73,7 @@ export async function chatWithAi(messages) {
   });
   return res.json();
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/main

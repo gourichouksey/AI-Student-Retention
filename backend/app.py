@@ -26,6 +26,7 @@ from flask_cors import CORS
 from backend.db import db
 from backend.models import Student, Prediction, Action, User, Scholarship
 from backend.services.predictor import predict_risk
+from backend.batch_routes import batch_bp
 from backend.services.shap_explain import explain_student
 from backend.services.recommender import generate_recommendations
 from backend.services.scholarship_loader import ensure_scholarships_loaded
@@ -54,6 +55,7 @@ def create_app():
     )
 
     db.init_app(app)
+    app.register_blueprint(batch_bp, url_prefix="/batch")
 
     with app.app_context():
         db.create_all()
