@@ -1,13 +1,14 @@
 {
-  "name": "student-retention-ai",
+  "name": "ai-student-retention",
   "version": "1.0.0",
   "description": "Full-stack demo for dropout risk prediction, SHAP explanation, recommendations, and monitoring.",
   "main": "index.js",
   "scripts": {
-    "dev": "npm --prefix frontend run dev",
-    "frontend": "npm --prefix frontend run dev",
+    "dev": "powershell -ExecutionPolicy Bypass -File .\\scripts\\start-frontend.ps1",
+    "frontend": "powershell -ExecutionPolicy Bypass -File .\\scripts\\start-frontend.ps1",
+    "fronted": "powershell -ExecutionPolicy Bypass -File .\\scripts\\start-frontend.ps1",
     "frontend:oauth": "powershell -ExecutionPolicy Bypass -File .\\frontend\\start-frontend-oauth.ps1",
-    "backend": ".venv\\Scripts\\python.exe backend\\services\\api_server.py",
+    "backend": "python -m backend.app",
     "build": "npm --prefix frontend run build",
     "preview": "npm --prefix frontend run preview",
     "test": "echo \"Error: no test specified\" && exit 1"
