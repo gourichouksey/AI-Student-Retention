@@ -107,6 +107,7 @@ py -3 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install --upgrade pip
 .\.venv\Scripts\python.exe -m pip install -r backend\requirements.txt
 ```
+If `py` is not available on your machine, use `python -m venv .venv` instead.
 
 ## 3) Install frontend dependencies
 
@@ -120,10 +121,15 @@ Create `frontend/.env.local`:
 
 ```env
 VITE_API_BASE_URL=http://127.0.0.1:5000
-VITE_GOOGLE_CLIENT_ID=YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com
 ```
 
-For Google OAuth local use, add this in Google Cloud Console (Authorized JavaScript origins):
+Set your Google OAuth client id in `backend/.env`:
+
+```env
+GOOGLE_CLIENT_ID=YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com
+```
+
+For Google OAuth local use, add this in Google Cloud Console (`Authorized JavaScript origins`):
 - `http://localhost:5300`
 
 # Run locally
@@ -132,6 +138,8 @@ For Google OAuth local use, add this in Google Cloud Console (Authorized JavaScr
 ```powershell
 npm run backend
 ```
+
+This runs `python -m backend.app` via `scripts/start-backend.ps1`.
 
 Health check:
 - `http://127.0.0.1:5000/health`
@@ -149,6 +157,7 @@ Frontend runs at:
 - If `.venv\Scripts\activate` fails, use direct Python path commands shown above.
 - If OAuth shows `origin_mismatch`, ensure the origin is exactly `http://localhost:5300`.
 - If frontend cannot reach backend, start backend first and verify `/health`.
+- If `npm run backend` says Python is missing, install Python 3.11+ and re-run the setup steps.
 
 # Use cases
 - Academic advisors prioritizing at-risk students
