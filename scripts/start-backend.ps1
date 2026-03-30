@@ -2,6 +2,22 @@ $ErrorActionPreference = "Stop"
 
 Set-Location (Join-Path $PSScriptRoot "..")
 
+function Stop-StaleBackendProcesses {
+  $pids = netstat -ano |
+    Select-String 'LISTENING' |
+    Select-String ':5000' |
+    ForEach-Object { ($_ -split '\s+')[-1] } |
+    Where-Object { $_ -match '^\d+$' -and $_ -ne '0' } |
+    Select-Object -Unique
+
+  foreach ($id in $pids) {
+    $proc = Get-Process -Id ([int]$id) -ErrorAction SilentlyContinue
+    if ($proc -and $proc.ProcessName -like "python*") {
+      Stop-Process -Id ([int]$id) -Force -ErrorAction SilentlyContinue
+    }
+  }
+}
+
 function Get-FallbackPythonPath {
   $candidates = @(
     "$env:LOCALAPPDATA\Programs\Python\Python*\python.exe",
@@ -18,6 +34,8 @@ function Get-FallbackPythonPath {
 
   return $null
 }
+
+Stop-StaleBackendProcesses
 
 $venvPython = Join-Path (Get-Location) ".venv\Scripts\python.exe"
 if (Test-Path $venvPython) {
@@ -37,6 +55,11 @@ if (Get-Command python -ErrorAction SilentlyContinue) {
 
 if (Get-Command python3 -ErrorAction SilentlyContinue) {
   & python3 -m backend.app
+  exit $LASTEXITCODE
+}
+
+if (Get-Command python3.11 -ErrorAction SilentlyContinue) {
+  & python3.11 -m backend.app
   exit $LASTEXITCODE
 }
 
