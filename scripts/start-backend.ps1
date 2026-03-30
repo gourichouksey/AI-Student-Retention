@@ -35,10 +35,15 @@ if (Get-Command python -ErrorAction SilentlyContinue) {
   exit $LASTEXITCODE
 }
 
+if (Get-Command python3 -ErrorAction SilentlyContinue) {
+  & python3 -m backend.app
+  exit $LASTEXITCODE
+}
+
 $fallbackPython = Get-FallbackPythonPath
 if ($fallbackPython) {
   & $fallbackPython -m backend.app
   exit $LASTEXITCODE
 }
 
-throw "Python was not found. Install Python 3.11+ or create .venv first."
+throw "Python was not found. Install Python 3.11+ (python/py/python3) or create .venv first."

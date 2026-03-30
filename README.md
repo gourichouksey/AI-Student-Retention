@@ -84,6 +84,7 @@ How It Works
 - Intervention monitoring and outcomes
 - Login/Sign-up (demo mode)
 
+
 # Setup (Easy Local Setup)
 
 > Run all commands from the project root (`fosshack`) unless noted.
@@ -119,6 +120,18 @@ cd ..
 ```
 
 ## 4) Add environment files
+<<<<<<< HEAD
+=======
+
+- Create `frontend/.env.local` with:
+   ```
+   VITE_API_BASE_URL=http://127.0.0.1:5000
+   ```
+- Create `backend/.env` with:
+   ```
+   GOOGLE_CLIENT_ID=YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com
+   ```
+>>>>>>> 13fe9b1 (data files)
 
 - Create `frontend/.env.local` with:
    ```
@@ -135,6 +148,10 @@ cd ..
 - If frontend cannot reach backend, start backend first and verify `/health`.
 - If `npm run backend` says Python is missing, install Python 3.11+ and re-run the setup steps.
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 13fe9b1 (data files)
 # Use cases
 - Academic advisors prioritizing at-risk students
 - Teachers identifying class-level risk drivers
