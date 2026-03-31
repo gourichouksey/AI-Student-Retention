@@ -2,6 +2,7 @@ services:
   - type: web
     name: ai-student-retention
     env: docker
+    plan: free
     autoDeploy: true
     healthCheckPath: /health
     envVars:

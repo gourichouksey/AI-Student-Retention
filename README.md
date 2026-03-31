@@ -149,7 +149,8 @@ This repo supports one-service deployment where Flask serves both API and built 
 
 Notes:
 - Production uses `gunicorn` via `Dockerfile`.
-- If you need persistent app-written data (`backend/data/*.json`), attach a persistent disk and mount it at `/app/backend/data`.
+- Blueprint is pinned to Render free plan (`plan: free`) to avoid paid-instance prompts.
+- Free plan storage is ephemeral. If you need persistent app-written data (`backend/data/*.json`), switch to a paid plan and mount a disk at `/app/backend/data`.
 
 
 # Use cases
