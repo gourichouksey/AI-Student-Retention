@@ -1,8 +1,8 @@
-FROM node:20-alpine AS frontend-build
+FROM node:20-bookworm-slim AS frontend-build
 WORKDIR /app/frontend
 
 COPY frontend/package*.json ./
-RUN npm ci
+RUN npm ci --include=optional
 
 COPY frontend/ ./
 RUN npm run build
