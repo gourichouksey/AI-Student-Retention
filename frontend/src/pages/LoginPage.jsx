@@ -45,7 +45,7 @@ export default function LoginPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-100 via-white to-slate-200 p-4 text-slate-900 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 dark:text-slate-100 md:p-8">
       <div className="mx-auto flex min-h-[calc(100vh-2rem)] max-w-6xl items-center md:min-h-[calc(100vh-4rem)]">
         <section className="glass w-full p-6 md:p-10">
-          <h1 className="text-center text-3xl font-bold md:text-4xl">AI-Student-Retention System</h1>
+          <h1 className="text-center text-3xl font-bold md:text-4xl">Student Retento</h1>
           <p className="mt-2 text-center text-slate-600 dark:text-slate-300">Student login only. Teacher login is disabled.</p>
 
           <div className="mt-8 grid gap-8 lg:grid-cols-2">
