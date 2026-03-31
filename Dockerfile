@@ -2,7 +2,9 @@ FROM node:20-bookworm-slim AS frontend-build
 WORKDIR /app/frontend
 
 COPY frontend/package*.json ./
+RUN npm install -g npm@11.12.1
 RUN npm ci --include=optional
+RUN npm install --no-save @rollup/rollup-linux-x64-gnu@4.59.0
 
 COPY frontend/ ./
 RUN npm run build
