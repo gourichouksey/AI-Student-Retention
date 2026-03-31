@@ -120,7 +120,7 @@ export default function AppShell({ children, notifications = [] }) {
             <div className={`mb-3 inline-flex rounded-xl border p-2 ${brandIconTone}`}>
               <FiBookOpen className="h-5 w-5" />
             </div>
-            <h1 className={`text-4xl font-bold leading-tight ${brandTitleTone}`}>Student Retention System</h1>
+            <h1 className={`text-4xl font-bold leading-tight ${brandTitleTone}`}>Student Retento</h1>
           </div>
 
           <nav className="space-y-2">
@@ -174,7 +174,7 @@ export default function AppShell({ children, notifications = [] }) {
         <main className="min-w-0 space-y-4 xl:col-start-2">
           <header className="glass relative z-40 flex flex-wrap items-center justify-between gap-3 overflow-visible px-4 py-3">
             <div>
-              <h2 className="page-title">{location.pathname === "/dashboard" ? "Dashboard" : "Student Retention Platform"}</h2>
+              <h2 className="page-title">{location.pathname === "/dashboard" ? "Dashboard" : "Student Retento"}</h2>
               <p className={`page-description ${mutedText}`}>AI-powered insights for intervention planning</p>
             </div>
             <div className="relative flex items-center gap-2" ref={headerNotificationsRef}>
